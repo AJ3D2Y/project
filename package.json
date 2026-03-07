@@ -1,18 +1,1 @@
-{
-  "name": "project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "cors": "^2.8.6",
-    "express": "^5.2.1",
-    "mongoose": "^9.2.1"
-  }
-}
+{"name":"my-mern-project","version":"1.0.0","private":true,"scripts":{"start":"concurrently \"npm run server\" \"npm run client\"","server":"cd backend && npm run dev","client":"cd client && npm start"},"devDependencies":{"concurrently":"^8.2.2"},"dependencies":{"react":"^18.3.1","react-datepicker":"^9.1.0","react-dom":"^18.3.1","react-router-dom":"^6.30.3"}}
