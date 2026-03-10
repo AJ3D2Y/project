@@ -8,7 +8,9 @@ const AppointmentForm = ({ onAdd }) => {
     name: "",
     date: "",
     time: "",
-    description: ""
+    service: "",
+    location: "",
+    notes: ""
   });
   const timeSlots = [
       "09:00",
@@ -65,7 +67,9 @@ const AppointmentForm = ({ onAdd }) => {
       name: "",
       date: "",
       time: "",
-      description: ""
+      service: "",
+      location: "",
+      notes: ""
       });
     } catch (error){
       console.error("Error submitting appointment:", error);
@@ -85,6 +89,70 @@ const AppointmentForm = ({ onAdd }) => {
     onChange={handleChange}
     required
     />
+    </div>
+    
+    <div>
+      <label>Location:</label>
+      <select
+        name="location"
+        value={formData.location}
+        onChange={handleChange}
+        required
+      >
+        <option value="">Select Location</option>
+        <option value="Brandon">Brandon</option>
+        <option value="Flowood">Flowood</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Service:</label>
+      <select
+        name="service"
+        value={formData.service}
+        onChange={handleChange}
+        required
+      >
+        <option value="">Select Service</option>
+        <option value="Manicure">Manicure</option>
+        <option value="French Manicure">French Manicure</option>
+        <option value="Gel Manicure">Gel Manicure</option>
+        <option value="Volcano Manicure">Volcano Manicure</option>
+        <option value="Deluxe Manicure">Deluxe Manicure</option>
+        <option value="Pedicure">Pedicure</option>
+        <option value="Deluxe Pedicure">Deluxe Pedicure</option>
+        <option value="Acrylic Nails">Acrylic Nails</option>
+        <option value="Ombre Set">Ombre Set</option>
+        <option value="Powder Dip">Powder Dip</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Date:</label>
+      <input
+        type="date"
+        name="date"
+        value={formData.date}
+        onChange={handleChange}
+        required
+      />
+    </div>
+
+    <div>
+      <label>Time:</label>
+      <select
+        name="time"
+        value={formData.time}
+        onChange={handleChange}
+        required
+      >
+        <option value="">Select Time</option>
+        {timeSlots.map((time) => (
+          <option key={time} value={time}>
+            {time}
+          </option>
+        ))}
+      </select>
     </div>
     {/*}
     <div>
@@ -129,16 +197,16 @@ const AppointmentForm = ({ onAdd }) => {
     </div>
     */}
     <div>
-    <label>Notes:</label>
-    <textarea
-    name="notes"
-    value={formData.notes}
-    onChange={handleChange}
-    />
+      <label>Notes:</label>
+      <textarea
+        name="notes"
+        value={formData.notes}
+        onChange={handleChange}
+      />
     </div>
 
     <button type="submit">Book Appointment</button>
-    </form>
+  </form>
   );
 };
 export default AppointmentForm;

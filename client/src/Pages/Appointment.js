@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import AppointmentForm from '../Components/AppoinmentForm';
+import AppointmentForm from "../Components/AppoinmentForm";
 import '../styles/App.css'; // Import the custom styles
 const Appointment = () => {
   const [appointments, setAppointments] = useState([]);
