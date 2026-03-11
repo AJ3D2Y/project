@@ -1,0 +1,194 @@
+/* ==========================================
+   APPOINTMENT FORM STYLES
+   ========================================== */
+
+/* ========== FORM CONTAINER ========== */
+.appointment-form-card {
+  background: white;
+  border-radius: 16px;
+  padding: 48px;
+  box-shadow: 0 8px 32px rgba(231, 84, 128, 0.15);
+  border: 1px solid rgba(231, 84, 128, 0.08);
+}
+
+.appointment-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.appointment-form-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 32px;
+  background: linear-gradient(135deg, #E75480, #CDB4DB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* ========== FORM GROUP ========== */
+.form-group {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 32px;
+}
+
+/* ========== LABELS ========== */
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* ========== INPUT FIELDS ========== */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 14px 16px;
+  border: 2px solid #E8E8E8;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  background-color: #FAFAFA;
+  color: #333333;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999999;
+}
+
+/* ========== INPUT FOCUS STATE ========== */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #E75480;
+  background-color: white;
+  box-shadow: 0 0 0 4px rgba(231, 84, 128, 0.1);
+  outline: none;
+}
+
+/* ========== TEXTAREA SPECIFIC ========== */
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-weight: 400;
+}
+
+/* ========== SELECT DROPDOWN STYLING ========== */
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E75480' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+/* ========== SUBMIT BUTTON ========== */
+.submit-button {
+  padding: 16px 32px;
+  margin-top: 8px;
+  background: linear-gradient(135deg, #E75480, #CDB4DB);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(231, 84, 128, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.submit-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(231, 84, 128, 0.4);
+}
+
+.submit-button:active {
+  transform: translateY(-2px);
+}
+
+.submit-button:focus {
+  outline: 2px solid #E75480;
+  outline-offset: 2px;
+}
+
+/* ========== RESPONSIVE - TABLET ========== */
+@media (max-width: 1024px) {
+  .appointment-form-card {
+    padding: 36px;
+  }
+
+  .appointment-form-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 28px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 14px;
+  }
+
+  .submit-button {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+}
+
+/* ========== RESPONSIVE - MOBILE ========== */
+@media (max-width: 768px) {
+  .appointment-form-card {
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .appointment-form-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group label {
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 12px;
+    font-size: 16px; /* Prevents zoom on iPhone */
+    border-radius: 8px;
+  }
+
+  .form-group textarea {
+    min-height: 100px;
+  }
+
+  .submit-button {
+    padding: 14px 24px;
+    font-size: 1rem;
+    margin-top: 12px;
+  }
+}

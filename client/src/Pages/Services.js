@@ -58,7 +58,7 @@ const services = [
 const Services = () => {
   return (
     <div className="services-page">
-      <h1>Our Services</h1>
+      <h1>✨ Our Services</h1>
 
       <div className="services-grid">
         {services.map((section, index) => (
@@ -75,9 +75,9 @@ const Services = () => {
         ))}
       </div>
 
-      <div style={{ marginTop: "40px" }}>
-        <Link to="/appointments">
-          <button className="book-btn">Book Appointment</button>
+      <div className="book-btn-container">
+        <Link to="/appointments" style={{ textDecoration: 'none' }}>
+          <button className="book-btn">💅 Book Appointment</button>
         </Link>
       </div>
     </div>

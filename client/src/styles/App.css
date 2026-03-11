@@ -1,46 +1,190 @@
-/* App.css */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
+/* ==========================================
+   GLOBAL STYLES - NAIL SALON APP
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ========== ROOT VARIABLES ========== */
+:root {
+  --primary-color: #E75480;
+  --secondary-color: #FADADD;
+  --accent-color: #CDB4DB;
+  --background-color: #FFF8FB;
+  --text-color: #333333;
+  --white: #FFFFFF;
+  --shadow: 0 8px 24px rgba(231, 84, 128, 0.15);
+  --shadow-hover: 0 12px 32px rgba(231, 84, 128, 0.25);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========== BASE STYLES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
 }
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* ========== TYPOGRAPHY ========== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
 h1 {
-  color: #333;
+  font-size: 3rem;
+  letter-spacing: -0.5px;
 }
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+/* ========== CONTAINER LAYOUT ========== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* ========== GLOBAL BUTTONS ========== */
+button {
+  font-family: 'Poppins', sans-serif;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--white);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  outline: none;
+}
+
+button:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+button:active {
+  transform: translateY(-2px);
+}
+
+button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* ========== FORM ELEMENTS ========== */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea,
+select {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  padding: 12px 16px;
+  margin: 8px 0;
+  border: 2px solid #E8E8E8;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: var(--white);
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(231, 84, 128, 0.1);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px 0;
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+/* ========== LISTS ========== */
 ul {
   list-style: none;
-  padding: 0;
 }
+
 li {
-  background-color: #fff;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: var(--transition);
 }
-input[type="text"] {
-  padding: 10px;
-  font-size: 16px;
-  margin-right: 10px;
+
+li:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
 }
-button {
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-}
-button:hover {
-  background-color: #45a049;
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
 }

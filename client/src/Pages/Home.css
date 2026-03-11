@@ -1,0 +1,312 @@
+/* ==========================================
+   HOME PAGE STYLES
+   ========================================== */
+
+/* ========== HERO SECTION ========== */
+.hero-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 40px;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 10;
+  animation: slideInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #E75480, #CDB4DB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 24px;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #666666;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* ========== CTA BUTTONS ========== */
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero-cta a {
+  text-decoration: none;
+}
+
+.cta-button {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #E75480, #CDB4DB);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(231, 84, 128, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-button:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(231, 84, 128, 0.4);
+}
+
+.cta-button:active {
+  transform: translateY(-2px);
+}
+
+.cta-button-secondary {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: transparent;
+  color: #E75480;
+  border: 2px solid #E75480;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-button-secondary:hover {
+  background-color: #FFF8FB;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(231, 84, 128, 0.2);
+}
+
+/* ========== DECORATIVE ELEMENTS ========== */
+.hero-decoration {
+  position: relative;
+  height: 400px;
+}
+
+.decoration-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.decoration-1 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #E75480, #CDB4DB);
+  top: 0;
+  right: 0;
+}
+
+.decoration-2 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #CDB4DB, #FADADD);
+  bottom: 0;
+  left: -100px;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ========== FEATURES SECTION ========== */
+.features-section {
+  padding: 80px 40px;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  background: linear-gradient(135deg, #E75480, #CDB4DB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #FFF8FB, #FADADD);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(231, 84, 128, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(231, 84, 128, 0.2);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #E75480;
+}
+
+.feature-card p {
+  color: #666666;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ========== FINAL CTA SECTION ========== */
+.cta-final {
+  background: linear-gradient(135deg, #E75480, #CDB4DB);
+  padding: 80px 40px;
+  text-align: center;
+  color: white;
+}
+
+.cta-final h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.cta-final p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button-large {
+  padding: 18px 48px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: white;
+  color: #E75480;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-button-large:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========== RESPONSIVE - TABLET ========== */
+@media (max-width: 1024px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 60px 30px;
+    min-height: auto;
+  }
+
+  .hero-decoration {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+}
+
+/* ========== RESPONSIVE - MOBILE ========== */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 20px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-button,
+  .cta-button-secondary {
+    width: 100%;
+  }
+
+  .features-section {
+    padding: 60px 20px;
+  }
+
+  .features-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cta-final {
+    padding: 60px 20px;
+  }
+
+  .cta-final h2 {
+    font-size: 1.75rem;
+  }
+
+  .cta-final p {
+    font-size: 1rem;
+  }
+}
